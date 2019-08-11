@@ -1,10 +1,5 @@
 package pl.homework.lib;
 
-import pl.homework.ex.HighFrequencyException;
-import pl.homework.ex.LowFrequencyException;
-
-import java.util.InputMismatchException;
-
 public abstract class Unit extends Part implements Turnable{
     private double temperature;
     private int clocking;
@@ -32,14 +27,6 @@ public abstract class Unit extends Part implements Turnable{
     }
 
     public void setClocking(int clocking) {
-        try {
-            this.clocking = clocking;
-        } catch ( InputMismatchException ex) {
-            throw ex;
-        }
-
+        this.clocking = clocking;
     }
-
-//    public abstract void turnUpClocking(int frequency) throws HighFrequencyException;
-//    public abstract void turnDownClocking(int frequency) throws LowFrequencyException;
 }

@@ -3,8 +3,6 @@ package pl.homework.app;
 import pl.homework.ex.*;
 import pl.homework.lib.*;
 
-import java.util.InputMismatchException;
-
 public class ComputerTest {
 
     public static Part[] assemble() throws TemperatureExcededException, LowFrequencyException, LowAmountMemoryException {

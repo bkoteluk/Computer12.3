@@ -5,8 +5,6 @@ import pl.homework.ex.LowAmountMemoryException;
 import pl.homework.ex.LowFrequencyException;
 import pl.homework.ex.TemperatureExcededException;
 
-import java.util.InputMismatchException;
-
 public class Ram extends Unit  {
     public static final double TEMP_DEPENDENCY = 0.15;
     public static final int MAX_TEMPERATURE = 70;
