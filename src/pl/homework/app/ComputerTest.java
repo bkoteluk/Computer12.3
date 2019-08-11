@@ -17,14 +17,13 @@ public class ComputerTest {
 
     public static void main(String[] args) {
         try {
+
             Computer computer = new Computer(assemble());
             System.out.println(computer);
-            ((Processor) computer.getParts()[0]).turnUpClocking(150);
-            ((Ram) computer.getParts()[1]).turnDownClocking(10);
+            computer.getProcessor().turnUpClocking(150);
+            computer.getRam().turnDownClocking(10);
             System.out.println(computer);
         } catch ( HighFrequencyException | LowFrequencyException | TemperatureExcededException | LowDiscCapasityException | LowAmountMemoryException ex) {
-            System.out.println(ex.getMessage());
-        } catch (InputMismatchException ex) {
             System.out.println(ex.getMessage());
         }
     }

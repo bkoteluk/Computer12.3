@@ -5,9 +5,6 @@ public abstract class Part {
     private String producer;
     private String sn;
 
-    public Part() {
-    }
-
     public Part(String model, String producer, String sn) {
         this.model = model;
         this.producer = producer;

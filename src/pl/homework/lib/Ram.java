@@ -11,8 +11,6 @@ public class Ram extends Unit  {
     public static final double TEMP_DEPENDENCY = 0.15;
     public static final int MAX_TEMPERATURE = 70;
 
-//    private double temperature;
-//    private int clocking;
     private int amount;
 
     public Ram(String model, String producer, String sn, double temperature, int clocking, int amount) throws LowFrequencyException, TemperatureExcededException, LowAmountMemoryException {
@@ -27,16 +25,7 @@ public class Ram extends Unit  {
         } else {
             setTemperature(temperature);
         }
-        try {
-            if (amount <= 0) {
-                throw new LowAmountMemoryException();
-            } else {
-                this.amount = amount;
-            }
-        } catch ( InputMismatchException ex) {
-            throw ex;
-        }
-
+        setAmount(amount);
     }
 
     public int getAmount() {
@@ -44,14 +33,10 @@ public class Ram extends Unit  {
     }
 
     public void setAmount(int amount) throws LowAmountMemoryException {
-        try {
-            if (amount <= 0) {
-                throw new LowAmountMemoryException();
-            } else {
-                this.amount = amount;
-            }
-        } catch ( InputMismatchException ex) {
-            throw ex;
+        if (amount <= 0) {
+            throw new LowAmountMemoryException();
+        } else {
+            this.amount = amount;
         }
     }
 

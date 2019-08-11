@@ -5,16 +5,9 @@ import pl.homework.ex.LowDiscCapasityException;
 public class Disc extends Part {
     private int capasity;
 
-    public Disc() {
-    }
-
     public Disc(String model, String producer, String sn, int capasity) {
         super(model, producer, sn);
-        if(capasity<=0) {
-            throw new LowDiscCapasityException();
-        } else {
-            this.capasity = capasity;
-        }
+        setCapasity(capasity);
     }
 
     public int getCapasity() {
@@ -31,6 +24,6 @@ public class Disc extends Part {
 
     @Override
     public String toString() {
-        return ">>> dysk twardy: " + super.toString() + "\n";
+        return ">>> dysk twardy: " + capasity + "GB; " + super.toString() + "\n";
     }
 }

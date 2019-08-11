@@ -1,26 +1,48 @@
 package pl.homework.lib;
 
+import java.nio.file.Path;
+
 public class Computer {
-    Part[] parts = new Part[3];
+    Processor processor;
+    Ram ram;
+    Disc disc;
 
     public Computer(Part[] parts) {
-        this.parts = parts;
+        this((Processor)parts[0], (Ram)parts[1], (Disc)parts[2]);
     }
 
-    public Part[] getParts() {
-        return parts;
+    public Computer(Processor processor, Ram ram, Disc disc) {
+        this.processor = processor;
+        this.ram = ram;
+        this.disc = disc;
     }
 
-    public void setParts(Part[] parts) {
-        this.parts = parts;
+    public Processor getProcessor() {
+        return processor;
+    }
+
+    public void setProcessor(Processor processor) {
+        this.processor = processor;
+    }
+
+    public Ram getRam() {
+        return ram;
+    }
+
+    public void setRam(Ram ram) {
+        this.ram = ram;
+    }
+
+    public Disc getDisc() {
+        return disc;
+    }
+
+    public void setDisc(Disc disc) {
+        this.disc = disc;
     }
 
     @Override
     public String toString() {
-        String result = ">>> Komputer <<< \n";
-        for (Part unit: parts) {
-            result += unit;
-        }
-        return result;
+        return ">>> Komputer \n" + processor + ram + disc;
     }
 }

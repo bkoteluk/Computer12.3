@@ -15,12 +15,8 @@ public abstract class Unit extends Part implements Turnable{
 
     public Unit(String model, String producer, String sn, double temperature, int clocking) {
         super(model, producer, sn);
-        try {
-            this.temperature = temperature;
-            this.clocking = clocking;
-        } catch ( InputMismatchException ex) {
-            throw ex;
-        }
+        setTemperature(temperature);
+        setClocking(clocking);
     }
 
     public double getTemperature() {
@@ -28,11 +24,7 @@ public abstract class Unit extends Part implements Turnable{
     }
 
     public void setTemperature(double temperature) {
-        try {
-            this.temperature = temperature;
-        } catch ( InputMismatchException ex) {
-            throw ex;
-        }
+        this.temperature = temperature;
     }
 
     public int getClocking() {
@@ -48,6 +40,6 @@ public abstract class Unit extends Part implements Turnable{
 
     }
 
-    public abstract void turnUpClocking(int frequency) throws HighFrequencyException;
-    public abstract void turnDownClocking(int frequency) throws LowFrequencyException;
+//    public abstract void turnUpClocking(int frequency) throws HighFrequencyException;
+//    public abstract void turnDownClocking(int frequency) throws LowFrequencyException;
 }
