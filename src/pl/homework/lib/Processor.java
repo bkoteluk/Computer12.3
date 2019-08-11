@@ -3,14 +3,11 @@ package pl.homework.lib;
 import pl.homework.ex.HighFrequencyException;
 import pl.homework.ex.LowFrequencyException;
 import pl.homework.ex.TemperatureExcededException;
-import pl.homework.ex.TemperatureExcededException;
 
 public class Processor extends Unit {
     public static final double TEMP_DEPENDENCY = 0.10;
     public static final int MAX_TEMPERATURE = 85;
 
-//    private double temperature;
-//    private int clocking;
 
     public Processor(String model, String producer, String sn, double temperature, int clocking) throws LowFrequencyException, TemperatureExcededException {
         super(model, producer, sn);
@@ -25,27 +22,6 @@ public class Processor extends Unit {
             throw new TemperatureExcededException();
         }
     }
-
-//    public void setTemperature(double temperature) throws TemperatureExeededException {
-//        if (temperature > MAX_TEMPERATURE) {
-//            this.temperature = temperature;
-//            throw new TemperatureExeededException();
-//        } else {
-//
-//        }
-//    }
-//
-//    public int getClocking() {
-//        return clocking;
-//    }
-
-//    public void setClocking(int clocking) throws LowFrequencyException {
-//        if (clocking >= 0) {
-//            this.clocking = clocking;
-//        } else {
-//            throw new LowFrequencyException();
-//        }
-//    }
 
     @Override
     public void turnUpClocking(int frequency) throws HighFrequencyException {

@@ -55,30 +55,6 @@ public class Ram extends Unit  {
         }
     }
 
-//    public double getTemperature() {
-//        return temperature;
-//    }
-
-//    public void setTemperature(int temperature) throws TemperatureExeededException {
-//        if (temperature > MAX_TEMPERATURE) {
-//            throw new TemperatureExeededException();
-//        } else {
-//            this.temperature = temperature;
-//        }
-//    }
-//
-//    public double getClocking() {
-//        return clocking;
-//    }
-//
-//    public void setClocking(int clocking) throws LowFrequencyException {
-//        if (clocking >= 0) {
-//            this.clocking = clocking;
-//        } else {
-//            throw new LowFrequencyException();
-//        }
-//    }
-
     @Override
     public void turnUpClocking(int frequency) throws HighFrequencyException {
         if ((getTemperature() + frequency*TEMP_DEPENDENCY) >= MAX_TEMPERATURE) {
