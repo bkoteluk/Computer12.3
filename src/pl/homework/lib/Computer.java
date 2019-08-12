@@ -3,13 +3,9 @@ package pl.homework.lib;
 import java.nio.file.Path;
 
 public class Computer {
-    Processor processor;
-    Ram ram;
-    Disc disc;
-
-    public Computer(Part[] parts) {
-        this((Processor)parts[0], (Ram)parts[1], (Disc)parts[2]);
-    }
+    private Processor processor;
+    private Ram ram;
+    private Disc disc;
 
     public Computer(Processor processor, Ram ram, Disc disc) {
         this.processor = processor;

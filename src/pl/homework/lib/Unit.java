@@ -4,12 +4,12 @@ public abstract class Unit extends Part implements Turnable{
     private double temperature;
     private int clocking;
 
-    public Unit(String model, String producer, String sn) {
-        super(model, producer, sn);
+    public Unit(String model, String producer, String serialNumber) {
+        super(model, producer, serialNumber);
     }
 
-    public Unit(String model, String producer, String sn, double temperature, int clocking) {
-        super(model, producer, sn);
+    public Unit(String model, String producer, String serialNumber, double temperature, int clocking) {
+        super(model, producer, serialNumber);
         setTemperature(temperature);
         setClocking(clocking);
     }

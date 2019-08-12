@@ -5,18 +5,13 @@ import pl.homework.lib.*;
 
 public class ComputerTest {
 
-    public static Part[] assemble() throws TemperatureExcededException, LowFrequencyException, LowAmountMemoryException {
-        Part[] parts = new Part[3];
-        parts[0] = new Processor("Xenon", "Intel", "333445500", 40, 30);
-        parts[1] = new Ram("SDRAM", "GOODRAM", "123456789", 35,15, 4048);
-        parts[2] = new Disc("SSD", "Samsung", "000001234", 240);
-        return parts;
-    }
-
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         try {
+            Processor processor = new Processor("Xenon", "Intel", "333445500", 40, 30);
+            Ram ram = new Ram("SDRAM", "GOODRAM", "123456789", 35,15, 4048);
+            Disc disc = new Disc("SSD", "Samsung", "000001234", 240);
 
-            Computer computer = new Computer(assemble());
+            Computer computer = new Computer(processor, ram, disc);
             System.out.println(computer);
             computer.getProcessor().turnUpClocking(150);
             computer.getRam().turnDownClocking(10);

@@ -3,12 +3,12 @@ package pl.homework.lib;
 public abstract class Part {
     private String model;
     private String producer;
-    private String sn;
+    private String serialNumber;
 
-    public Part(String model, String producer, String sn) {
+    public Part(String model, String producer, String serialNumber) {
         this.model = model;
         this.producer = producer;
-        this.sn = sn;
+        this.serialNumber = serialNumber;
     }
 
     public String getModel() {
@@ -27,16 +27,16 @@ public abstract class Part {
         this.producer = producer;
     }
 
-    public String getSn() {
-        return sn;
+    public String getSerialNumber() {
+        return serialNumber;
     }
 
-    public void setSn(String sn) {
-        this.sn = sn;
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
     }
 
     @Override
     public String toString() {
-        return " model: " + model + "; producent: " + producer + "; s/n: " + sn;
+        return " model: " + model + "; producent: " + producer + "; s/n: " + serialNumber;
     }
 }

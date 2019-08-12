@@ -11,8 +11,8 @@ public class Ram extends Unit  {
 
     private int amount;
 
-    public Ram(String model, String producer, String sn, double temperature, int clocking, int amount) throws LowFrequencyException, TemperatureExcededException, LowAmountMemoryException {
-        super(model, producer, sn);
+    public Ram(String model, String producer, String serialNumber, double temperature, int clocking, int amount) throws LowFrequencyException, TemperatureExcededException, LowAmountMemoryException {
+        super(model, producer, serialNumber);
         if (clocking >= 0) {
             setClocking(clocking);
         } else {

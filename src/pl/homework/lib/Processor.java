@@ -9,15 +9,15 @@ public class Processor extends Unit {
     public static final int MAX_TEMPERATURE = 85;
 
 
-    public Processor(String model, String producer, String sn, double temperature, int clocking) throws LowFrequencyException, TemperatureExcededException {
-        super(model, producer, sn);
+    public Processor(String model, String producer, String serialNumber, double temperature, int clocking) throws LowFrequencyException, TemperatureExcededException {
+        super(model, producer, serialNumber);
         if (clocking >= 0) {
-            this.setClocking(clocking);
+            setClocking(clocking);
         } else {
             throw new LowFrequencyException();
         }
         if (temperature <= MAX_TEMPERATURE) {
-            this.setTemperature(temperature);
+            setTemperature(temperature);
         } else {
             throw new TemperatureExcededException();
         }

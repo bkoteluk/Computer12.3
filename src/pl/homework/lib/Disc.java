@@ -5,8 +5,8 @@ import pl.homework.ex.LowDiscCapasityException;
 public class Disc extends Part {
     private int capasity;
 
-    public Disc(String model, String producer, String sn, int capasity) {
-        super(model, producer, sn);
+    public Disc(String model, String producer, String serialNumber, int capasity) {
+        super(model, producer, serialNumber);
         setCapasity(capasity);
     }
 
